@@ -119,7 +119,7 @@
     "lsp": {
         "clangd": {
             "initialization_options": {
-                "fallbackFlags": ["-Isrc", "-Iext", "-Ithird_party"],
+                "fallbackFlags": ["-std=c++23", "-Isrc", "-Iext", "-Ithird_party"],
                 "clang-format": {
                     "IndentWidth": 4,
                     "TabWidth": 4,
