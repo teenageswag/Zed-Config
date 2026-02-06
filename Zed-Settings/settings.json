@@ -1,70 +1,104 @@
 {
     "vim_mode": false,
     "disable_ai": true,
-    "theme": "Minimal Blur",
-    "icon_theme": "Colored Zed Icons Theme Dark",
-    "ui_font_size": 16,
-    "buffer_font_size": 15,
-    "buffer_font_family": ".ZedMono",
-    "buffer_line_height": "comfortable",
-    "cursor_shape": "underline",
-    "cursor_blink": true,
     "base_keymap": "VSCode",
+
     "autosave": "on_focus_change",
     "format_on_save": "on",
     "ensure_final_newline_on_save": true,
     "remove_trailing_whitespace_on_save": true,
-    "tab_size": 4,
-    "soft_wrap": "editor_width",
-    "preferred_line_length": 100,
-    "git": {
-        "git_gutter": "tracked_files",
-        "inline_blame": {
-            "enabled": true,
-            "delay_ms": 500,
-        },
-        "hunk_style": "staged_hollow",
+
+    "restore_on_startup": "launchpad",
+    "session": {
+        "restore_unsaved_buffers": true,
     },
+
+    "theme": "Minimal Blur",
+    "icon_theme": "Colored Zed Icons Theme Dark",
+
+    "ui_font_size": 16,
+    "buffer_font_size": 15,
+    "buffer_font_family": ".ZedMono",
+    "buffer_line_height": "comfortable",
+
+    "cursor_shape": "underline",
+    "cursor_blink": false,
+
+    "tab_size": 4,
+    "soft_wrap": "prefer_line",
+    "preferred_line_length": 100,
+
+    "indent_guides": {
+        "enabled": true,
+        "coloring": "indent_aware",
+    },
+
     "tabs": {
         "file_icons": true,
         "git_status": true,
         "show_close_button": "hover",
     },
+
     "gutter": {
         "line_numbers": true,
         "folds": true,
     },
+
     "scrollbar": {
         "show": "auto",
         "git_diff": true,
         "diagnostics": "all",
     },
+
     "minimap": {
         "show": "never",
     },
+
     "toolbar": {
         "breadcrumbs": true,
         "quick_actions": true,
     },
-    "indent_guides": {
-        "enabled": true,
-        "coloring": "indent_aware",
+
+    "git": {
+        "git_gutter": "tracked_files",
+        "inline_blame": {
+            "enabled": true,
+            "delay_ms": 750,
+        },
+        "hunk_style": "staged_hollow",
     },
+
     "diagnostics": {
         "include_warnings": true,
         "inline": {
             "enabled": true,
         },
     },
+
     "file_scan_exclusions": [
         "**/.git",
-        "**/node_modules",
-        "**/target",
-        "**/dist",
-        "**/build",
         "**/.vscode",
+        "**/node_modules",
+        "**/build",
+        "**/dist",
+        "**/target",
+        "**/.cache",
+        "**/out",
     ],
+
     "languages": {
+        "C++": {
+            "tab_size": 4,
+            "hard_tabs": false,
+            "format_on_save": "on",
+        },
+        "C": {
+            "tab_size": 4,
+            "hard_tabs": false,
+        },
+        "JSON": {
+            "tab_size": 2,
+        },
         "JavaScript": {
             "tab_size": 2,
         },
@@ -74,29 +108,29 @@
         "TSX": {
             "tab_size": 2,
         },
-        "JSON": {
+        "HTML": {
             "tab_size": 2,
         },
         "CSS": {
             "tab_size": 2,
         },
-        "HTML": {
-            "tab_size": 2,
-        },
     },
-    "telemetry": {
-        "diagnostics": false,
-        "metrics": false,
-    },
-    "restore_on_startup": "launchpad",
-    "session": {
-        "restore_unsaved_buffers": true,
-    },
+
     "lsp": {
         "clangd": {
             "initialization_options": {
-                "fallbackFlags": ["-Isrc", "-Iext"],
+                "fallbackFlags": ["-Isrc", "-Iext", "-Ithird_party"],
+                "clang-format": {
+                    "IndentWidth": 4,
+                    "TabWidth": 4,
+                    "ColumnLimit": 100,
+                },
             },
         },
+    },
+
+    "telemetry": {
+        "diagnostics": false,
+        "metrics": false,
     },
 }
