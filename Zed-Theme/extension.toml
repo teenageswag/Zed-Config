@@ -1,7 +1,7 @@
-id = "minimal-blur-theme"
-name = "Minimal Blur Theme"
+id = "minimal-dark-blur-theme"
+name = "Dark Minimal Blur Theme"
 description = "A minimalistic, pleasant dark theme with deep colors."
 version = "0.1.0"
 schema_version = 2
 authors = ["j2cks"]
-repository = "https://github.com/teenageswag/Zed-Theme"
+repository = "https://github.com/teenageswag/Zed-Config/tree/main/Zed-Theme"
